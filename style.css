@@ -1,0 +1,348 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@keyframes click-about-me {
+    0% {transform: translate(-50%, -5px);}
+    50% {transform: translate(-50%, 5px);}
+    100% {transform: translate(-50%, -5px);}
+}
+
+@keyframes click-top{
+    0% {transform: translate(0, -5px);}
+    50% {transform: translate(0, 5px);}
+    100% {transform: translate(0, -5px);}
+}
+
+:root {
+    --bg-color: rgb(15, 12, 22);
+    --brdr-color: rgb(60, 37, 97);
+    --bright-color: rgb(173, 118, 245);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #00000000;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--bright-color);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+#lang {
+    position: absolute; 
+    top: 20px;
+    right: 50px;
+}
+
+#lang summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: 3px solid var(--brdr-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+}
+
+#lang summary::marker{
+    content: none;
+}
+
+#lang-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+#lang-box a {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    text-decoration: none;
+    background-color: var(--bright-color);
+    color: black;
+}
+
+#lang-box a:hover {
+    background-color: rgb(203, 164, 255);
+}
+
+#initial-info {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+#initial-info h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+#initial-info h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#initial-info p {
+    font-size: 1em;
+    text-align: center;
+}
+
+#cta {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 15px;
+}
+
+#cta a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 20px;
+    border: 4px solid var(--brdr-color);
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#cta a:hover {
+    transform: scale(1.2);
+    transition-duration: 500ms;
+    color: var(--bright-color);
+}
+
+#click-about-me {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    bottom: 20px;
+    left: 50vw;
+    text-decoration: none;
+    animation: click-about-me 2s infinite;  
+}
+
+#about-me, #areas, #skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+#about-me > h2, #areas > h2, #skills > h2 {
+    font-size: 2em;
+}
+
+#about-me-box, #areas-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 75%;
+    border: 5px solid var(--brdr-color);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+#me {
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile h2 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#about-me-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+#areas-box {
+    border: none;
+    gap: 100px;
+}
+
+.interest-area {
+    text-align: center;
+    max-width: 250px;
+}
+
+.interest-area .material-symbols-outlined {
+    font-size: 5em;
+}
+
+#skills {
+    gap: 50px;
+    padding: 50px 0 25px;
+}
+
+#skills > h3 {
+    font-size: 1.4em;
+}
+
+.skills-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 75%;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px ;
+    height: 150px;
+    text-align: center;
+    border: 3px solid var(--brdr-color);
+    border-radius: 20px;
+}
+
+#click-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    bottom: 20px;
+    text-decoration: none;
+    animation: click-top 2s infinite;  
+}
+
+@media (max-width: 1340px) {
+    #about-me-box {
+        flex-direction: column;
+    }
+} 
+    
+@media (max-width: 700px) {
+    #about-me > h2, #areas > h2, #skills > h2 {
+        font-size: 1.5em;
+    }
+
+    .interest-area {
+        font-size: 0.7em;
+    }
+} 
+
+@media (max-width: 400px) {
+    #lang {
+        top: 10px;
+        right: 20px;
+    }
+
+    #initial-info h1 {
+        font-size: 3em;
+    }
+
+    #cta {
+        gap: 10px;
+    }
+
+    #cta a {
+        width: 130px;
+    }
+
+    #about-me, #areas, #skills {
+        padding: 10px;
+    }
+
+    #about-me {
+        margin-top: 20px;
+    }
+
+    #about-me-box {
+        border: 1px solid var(--brdr-color);
+        padding: 10px;
+        width: 90%;
+    }
+
+    #me {
+        width: 150px;
+        height: 150px;
+    } 
+
+    #profile h2 {
+        font-size: 1.6em;
+    }
+
+    #about-me-text {
+        font-size: 0.8em;
+    }
+
+    #info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #areas-box {
+        gap: 10px;
+    }
+
+    .interest-area {
+        font-size: 0.6em;
+    }
+
+    .skills-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+    
